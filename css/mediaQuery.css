@@ -1,0 +1,53 @@
+/* NE 모바일 미디어쿼리 css */
+@charset "utf-8";
+
+@media only screen and (min-width: 650px) {
+	.mtop,
+	#mmenu {
+		display: none;
+	}
+}
+@media only screen and (max-width: 650px) {
+	body {
+		max-width: 650px;
+		overflow-x: hidden;
+	}
+	.ibx {
+		max-width: 650px;
+		overflow: hidden;
+	}
+	#top,
+	.block,
+	.side,
+	#indic,
+	.arrow,
+	.arr,
+	.indic {
+		display: none;
+	}
+	#mmenu {
+		display: block;
+	}
+	.mtop {
+		display: block;
+		height: 65px;
+	}
+	#ban {
+		height: 100%;
+	}
+	.slide {
+		background: #eee;
+	}
+	.slide>ul img {
+		position: absolute;
+		max-width: 750px;
+		top: 50px;
+		left: -100px;
+	}
+	.cont2 {
+		height: 280px;
+		overflow-y: hidden;
+	}
+
+
+}

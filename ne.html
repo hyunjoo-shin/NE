@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NE Build & Grow</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- 로그인 팝업 -->
+    <div id="popup">
+        <span>로그인 페이지로 이동합니다.</span>
+        <br>
+        <button id="login">이동</button><button id="close">닫기</button>
+    </div>
+    <!-- A. 메뉴  -->
+<!-- 모바일용 상단 메뉴바 -->
+    <div class="mtop">
+        <div class="mtop1 ibx">
+            <a class="login" id="mcart" href="#">
+                <img src="m_image/btn_cart.png" alt="쇼핑카트">
+                <span>0</span>
+            </a>
+            <a class="mlogo" href="ne.html"><img src="image/logo.gif" alt="메인로고"></a>
+            <a class="ham" href="#"><img src="m_image/menu_icon.JPG" alt="햄버거버튼"></a>
+        </div>
+        <div class="mtop2 ibx">
+            <div><a href="#">Books</a></div>
+            <div><a href="#">ClassPack</a></div>
+        </div>
+    </div>
+<!-- 모바일용 메인메뉴 -->
+    <div id="mmenu">
+        <ul class="mmenu">
+            <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=100">교재/학습자료</a>
+                <ul class="msub">
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=101">Phonics</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=100">Coursebook</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=102">Readers</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=104">Listening</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=103">Reading</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=105">Speaking</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=107">Grammar</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=106">Writing</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=108">Vocabulary</a></li>
+                    <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=109">Etc.</a></li>
+                        
+                </ul>
+            </li>
+            <li><a href="#">브랜드 소개</a></li>
+            <li><a href="#">부가 서비스</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul> 
+    </div>
+    <div id="top">
+        <header class="top">
+            <!-- 상단메뉴 -->
+            <div class="wrap">
+                <div class="ibx top1">
+                    <ul>
+                        <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/etc/login.asp?WHEREJOIN=77&FNUM=1">로그인</a></li>
+                        <li><a href="https://members.neungyule.com/pages/t_member/join.asp?WHEREJOIN=77&FNUM=1">회원가입</a></li>
+                        <li><a class="login" href="#">주문/배송</a></li>
+                        <li><a class="login" id="cart1" href="#">
+                                <img src="image/ico_basket.png" alt="쇼핑카트">
+                                <span> 0 </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a id="search1" href="https://www.nebuildandgrow.co.kr/mall/index.asp">
+                        <img src="image/btn_search.gif" alt="검색아이콘">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="ibx top2">
+                <!-- 메인로고 -->
+                <div class="pbx col-3">
+                    <h1 class="tit">
+                        <a href="ne.html"><img src="image/logo.gif" alt="메인로고"></a>
+                    </h1>
+                </div>
+                <!-- GNB 메뉴 -->
+                <div class="pbx col-9">
+                    <div class="gnb">
+                        <dl>
+                            <dt><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=100">메인교재</a></dt>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=101">Phonics</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=100">Coursebook</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=102">Readers</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=104">Listening</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=103">Reading</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=105">Speaking</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=107">Grammar</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=106">Writing</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=108">Vocabulary</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=109">Etc.</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp?depth1=109">부가교재</a></dt>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp">Word Book</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/product/list.asp">Test & Worksheet</a></dd>
+                            <dd><a href="https://www.netutor.co.kr/level_test/pages/leveltest_intro.asp ">Tests</a></dd>
+                            <dd><a href="https://www.nebooks.co.kr/comeon/pages/material/material_cp.asp">Teacher's Guide</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="https://www.netutor.co.kr/pages/curriculum_popular.asp" target="_blank">커리큘럼</a></dt>
+                            <dd><a href="https://www.netutor.co.kr/pages/curriculum_popular.asp" target="_blank">추천 커리큘럼</a></dd>
+                            <dd><a href="https://www.netutor.co.kr/pages/curriculum_chart.asp" target="_blank">교재 레벨차트</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/seminar.asp ">신간소개</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/notice.asp">고객센터</a></dt>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/notice.asp">공지사항</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/seminar.asp">세미나/이벤트</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/faq.asp ">자주하는 질문</a></dd>
+                            <dd><a class="login" href="#">1:1문의</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/study_room.asp">공부방/서점안내</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="https://www.nebuildandgrow.co.kr/mall/pages/brand/grow.asp">브랜드 소개</a></dt>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/brand/grow.asp">NE Build & Grow</a></dd>
+                            <dd><a href="https://www.nebuildandgrow.co.kr/mall/pages/brand/map.asp">찾아오시는 길</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a class="login" href="#">마이페이지</a></dt>
+                            <dd><a class="login" href="#">주문/배송현황</a></dd>
+                            <dd><a class="login" href="#">1:1문의내역</a></dd>
+                            <dd><a class="login" href="#">포인트</a></dd>
+                            <dd><a class="login" href="#">회원정보</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- 메뉴 플로팅 후 올라가는 배너 밀어내기 -->
+    <div class="block"><span class="ir">밀어내기 블록</span></div>
+    <!-- B. 배너 -->
+    <div id="ban">
+        <div class="ibx">
+            <section class="ibx slide">
+                
+                <ul >
+                    <li class="on"><a href="#"><img src="image/B&G_Mall_Web_1000x425_1.png" alt="Learn With Us 코스북"></a></li>
+                    <li><a href="#"><img src="image/B&G_Mall_Web_1000x425_2.png" alt="엔이튜터 스마트클래스 오픈"></a></li>
+                    <li><a href="#"><img src="image/B&G_Mall_Web_1000x425_3.png" alt="Write It 시리즈"></a></li>
+
+                </ul>
+            </section>
+            <ol id="indic">
+                <li>
+                    <img src="image/bl_on.png" alt="불릿">
+                </li>
+                <li>
+                    <img src="image/bl_off.png" alt="불릿">
+                </li>
+                <li>
+                    <img src="image/bl_off.png" alt="불릿">
+                </li>
+            </ol>
+            <section class="pbx col-2 side">
+                <div class="smenu">
+                    <h2 class="bld">교재사이드메뉴</h2>
+                    <a href="https://www.nebooks.co.kr/comeon/pages/phonics/introduce.asp"><img src="image/n_quick01.png" alt="유초등파닉스"></a>
+                    <a href="https://www.nebooks.co.kr/comeon/pages/everyone/introduce.asp"><img src="image/n_quick02.png" alt="초등코스북"></a>
+                    <a href="https://www.nebooks.co.kr/pages/oup/primary.asp"><img src="image/n_quick03.png" alt="Oxford제품소개"></a>
+                </div>
+                <div class="tsearch">
+                    <a href="https://www.nebuildandgrow.co.kr/mall/index.asp">
+                        <img src="image/ico_search.png" alt="교재찾기"></a>
+                        <span>교재 쉽게 찾기</span>
+                </div>
+                
+            </section>
+            <div class="arrow">
+                <a class="arrow1" href="#"><img src="image/m_banner_prev.png" alt="화살표 이전"></a>
+                <a class="arrow2" href="#"><img src="image/m_banner_next.png" alt="화살표 다음"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- C.메인 -->
+    <main>
+        <!-- 3. 퀵메뉴 -->
+        <div id="cont2">
+            <section class="ibx cont2">
+                <h2 class="bld">퀵메뉴</h2>
+                <div class="quick">
+                    <a href="https://www.netutor.co.kr/level_test/pages/leveltest_intro.asp" target="_blank"><img src="image/ban01_2019.gif" alt="레벨테스트"></a>
+                    <a href="https://www.netutor.co.kr/pages/curriculum_popular.asp" target="_blank"><img src="image/ban02_2019.gif" alt="추천커리큘럼"></a>
+                    <a href="https://www.netutor.co.kr/pages/curriculum_chart.asp" target="_blank"><img src="image/ban03_2019.gif" alt="교재레벨차트"></a>
+                    <a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/english_class.asp"><img src="image/ban04_2019.gif" alt="English Class"></a>
+                    <a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/study_room.asp"><img src="image/ban05_2019.gif" alt="서점/공부방"></a>
+                    <a href="https://www.nebooks.co.kr/pages/oup/primary.asp"><img src="image/ban06_2019.gif" alt="Oxford 제품소개"></a>
+                </div>
+            </section>
+        </div>
+        <!-- 4. 이벤트 배너 -->
+        <div id="cont3">
+            <section class="ibx cont3">
+                <div id="event">
+                    <h2 class="tit2">이벤트 · 신간소개 · 세미나</h2>
+                    <div class="event">
+                        <img src="image/mall_main_center_580x220_1.png" alt="홈스쿨링온라인Live">
+                        <img src="image/mall_main_center_580x220_2.png" alt="Oxford Discover">
+                        <img src="image/mall_main_center_580x220_3.png" alt="혼강선생님을위한 온라인Live">
+                        <img src="image/mall_main_center_580x220_4.png" alt="선생님들을위한 수업준비">
+                        <img src="image/mall_main_center_580x220_5.png" alt="영어쌤에게 꼭 필요한 전자기기 활용법">
+                        <img src="image/mall_main_center_580x220_6.png" alt="Learn With Us 코스북">
+                        <img src="image/mall_main_center_580x220_7.png" alt="Easy Link 시리즈">
+                    </div>      
+                </div>
+                <section id="arr">
+                    <a class="arr arr1" href="#"><img src="image/m_banner_prev.png" alt="화살표 이전"></a>
+                    <a class="arr arr2" href="#"><img src="image/m_banner_next.png" alt="화살표 다음"></a>
+                </section>
+                <div class="indic">
+                    <ul>
+                        <li><img src="image/bl_on.png" alt="불릿"></li>
+                        <li><img src="image/bl_off.png" alt="불릿"></li>
+                        <li><img src="image/bl_off.png" alt="불릿"></li>
+                        <li><img src="image/bl_off.png" alt="불릿"></li>
+                        <li><img src="image/bl_off.png" alt="불릿"></li>
+                        <li><img src="image/bl_off.png" alt="불릿"></li>
+                        <li><img src="image/bl_off.png" alt="불릿"></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- 5. 고객센터/공지사항 -->
+        <div id="cont4">
+            <section class="ibx cont4">
+                <div class="custom pbx col-4">
+                    <h2 class="tit2">고객센터</h2>
+                    <section>
+                        <img src="image/ico_customer.gif" alt="고객센터이미지">
+                        <h1>02-2014-7260</h1>
+                        <h3>평일 : 9시~18시 (점심 12:30~13:30)</h3>
+                    </section>
+                </div>
+                <div class="faq pbx col-4">
+                    <a class="login" href="#">
+                        <img src="image/ico_inquiry.gif" alt="1:1문의 아이콘">
+                        <span>1:1 문의</span>
+                    </a>
+                    <a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/faq.asp">
+                        <img src="image/ico_faq.gif" alt="자주하는질문 아이콘">
+                        <span>자주하는 질문</span>
+                    </a>
+                    <a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/bookstore.asp">
+                        <img src="image/ico_book.gif" alt="서점안내 아이콘">
+                        <span>서점안내</span>
+                    </a>
+
+                </div>
+                <div class="notice pbx col-4">
+                    <h2 class="tit2">공지사항</h2>
+                    <span class="more"><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/notice.asp?page=&searchText=">+ 더보기</a></span>
+                    <div id="notice">
+                        <ul>
+                            <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/notice_view.asp?seq=282">[안내] OUP 수입원서 일부 제품 정가 변경</a><span>2021-05-14</span></li>
+                            <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/notice_view.asp?seq=280">[Oxford Discover 2E] Answer Keys 업로드</a><span>2021-03-31</span></li>
+                            <li><a href="https://www.nebuildandgrow.co.kr/mall/pages/customer/notice_view.asp?page=1&searchText=&seq=278">[필독] 이용약관 개정안내 (3/19 시행)</a><span>2021-03-12</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- D.하단영역 -->
+    <div id="info">
+        <footer class="ibx info">
+            <h2 class="bld">회사정보</h2>
+            <div class="pbx info1 col-12">
+                <div class="pol pbx col-4">
+                    <a href="https://members.neungyule.com/pages/t_member/private.asp?WHEREJOIN=77&FNUM=1">개인정보처리방침</a>
+                    <a href="https://members.neungyule.com/pages/t_member/agreement.asp?WHEREJOIN=77&FNUM=1">이용약관</a>
+                </div>
+                <div class="sns pbx col-4">
+                    <a href="https://cafe.naver.com/buildngrow"><img src="image/quick04.png" alt="네이버카페 아이콘"></a>
+                    <a href="https://blog.naver.com/hyohyo9292"><img src="image/quick05.png" alt="블로그 아이콘"></a>
+                    <a href="https://pf.kakao.com/_TUqxiM"><img src="image/quick06.png" alt="카톡 아이콘"></a>
+                    <a href="https://story.kakao.com/ch/momsglish"><img src="image/quick07.png" alt="카카오스토리 아이콘"></a>
+                </div>
+                <div class="pbx col-4">
+
+                    <select id="fam" name="패밀리 사이트" onchange="if(this.value) window.open(this.value);">
+                        <option value="">패밀리사이트</option>
+                        <option value="http://www.nelab.co.kr/gate.asp">NE능률 주니어랩</option>
+                        <option value="http://www.nemathfun.co.kr/pages/main.asp">NE매쓰펀</option>
+                        <option value="https://www.neclass.com/main.do">NE클래스</option>
+                        <option value="https://www.netutor.co.kr/">NE Tutor</option>
+                        <option value="https://www.netimes.co.kr/">NE Times</option>
+                        <option value="https://www.nebooks.co.kr/pages/">NE Books</option>
+                        <option value="https://www.nekids.co.kr/_pages/index/b2b_index.asp">NE Kids</option>
+                        <option value="https://www.i-challenge.co.kr/">아이챌린지</option>
+                        <option value="https://www.neungyule.com/pages/ko/">NE능률</option>
+                    </select>
+                </div>
+            </div>
+            <div class="info2_bg"></div>
+            <div class="pbx info2 col-12">
+                <div class="blogo pbx">
+                    <img src="image/f_logo.gif" alt="하단로고이미지">
+                </div>
+                <div class="address pbx">
+                    <p>
+                        ㈜NE능률 (03925) 서울 특별시 마포구 월드컵북로 396(상암동) 누리꿈스퀘어 비즈니스타워 10층 | 대표이사 : 주민홍 | 대표번호 : 02-2014-7114 <br>
+                        팩스 : 02-337-4956 | 고객센터 : 1833-8368 | 사업자등록번호 : 105-81-65267 | 개인정보 보호책임자(CPO) : 이규한(necpo@neungyule.com) <br>
+                    </p>
+                    <p>
+                        Copyright © NE Neungyule, Inc. All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- 그리드뷰 -->
+    <ul class="grid">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html트

@@ -1,0 +1,667 @@
+@charset "utf-8";
+@import url(gridSet.css);
+@import url(gridView.css);
+@import url(reset.css);
+@import url(mediaQuery.css);
+@import url(mobile.css);
+
+/* 그리드뷰 */
+.grid {
+    width: 650px;
+    z-index: 99999999999;
+    opacity: .3;
+    display: none;
+}
+
+body {
+    position: relative;
+}
+
+/* 디자인검수용 가상요소 박스 */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background: #fff url(../image/screencapture-nebuildandgrow_sub.png) no-repeat top/1280px; */
+    background: #fff url(../image/NE_layout_mobile_sub.jpg) no-repeat top/660px;
+    opacity: .3;
+    z-index: 99999999999999999;
+    display: none;
+}
+ol,ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+/**************** 공통클래스 ***************/
+
+/* 속박스 */
+.ibx {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.ibx::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 파티션 */
+.pbx {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    
+}
+
+/* IR 배경이미지 설명 숨기기 클래스 */
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 숨기기 */
+.bld {
+    display: none;
+}
+
+h2 {
+    font: bold 20px/26px sans-serif;
+    letter-spacing: -1px;
+}
+
+/************* 개별영역 ************/
+/* 로그인 팝업창 */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 30px;
+    background-color: rgb(255, 255, 255, .8);
+    z-index: 9999999999;
+    display: none;
+}
+#popup span {
+    font: 20px sans-serif;
+    line-height: 60px;
+}
+#popup button {
+    width: 80px;
+    height: 28px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 5px;
+    border: solid 1px #888;
+    border-radius: 3px;
+    box-shadow: 3px 3px #999;
+}
+#popup button:hover {
+    color: #999;
+    font-weight: bold;
+}
+#popup button:active {
+    box-shadow: 1px 1px #888;
+    transform: translateY(2px);
+}
+
+#popup button:nth-of-type(2) {
+    margin-left: 30px;
+}
+/******* A. 상단 *******/
+
+/* 메뉴바 플로팅 + 하단 테두리 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 110px;
+    width: 100%;
+    border-bottom: 2px solid #888888;
+    background-color: #fff;
+    z-index: 2;
+}
+/* 1. 상단 메뉴바 */
+.wrap {
+    height: 34px;
+    background-color: #444444;
+}
+.top1 {
+    position: relative;
+    height: 34px;
+    background-color: #444444;
+}
+.top1>ul {
+    position: absolute;
+    left: 670px;
+}
+.top1 li {
+    position: relative;
+    float: left;
+    width: 64px;
+    padding: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* 메뉴 호버 시 글자색 변경 */
+.top1 a:hover {
+    color: #fff;
+}
+/* 주문/배송 위치조정 */
+.top1 li:nth-child(3) {
+    width: 72px;
+}
+.top1 a {
+    font: bold 12px/16px sans-serif;
+    color: #ccc;
+}
+/* 카트 옆 숫자 */
+.top1 span {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    color: #999;
+    margin-left: 2px;
+    margin-top: 2px;
+    font: bold 12px/18px arial;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+}
+/* 카트 위치 조정 */
+.top1 li:last-child a{
+    display: block;
+    margin-bottom: 2px;
+    margin-right: 14px;
+}
+/* 상단메뉴 사이에 세로바 넣기 */
+.top1 li+li::before {
+    content: '|';
+    display: inline-block;
+    position: absolute;
+    left: -2px;
+    top: 9px;
+    color: #ccc;
+    vertical-align: middle;
+}
+/* 검색아이콘 */
+#search1 img{
+    position: absolute;
+    height: 34px;
+    right: 0;
+}
+
+/* 2. gnb 메뉴바 */
+.top2 {
+    position: relative;
+}
+/* 로고 */
+.tit {
+    position: absolute;
+    margin-top: 32px;
+}
+/* 메인메뉴 gnb */
+.gnb {
+    position: absolute;
+    height: 62px;
+    width: 718px;
+    left: 282px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: height .3s ease-out;
+    z-index: 2;
+}
+/* 메뉴 호버 시 폰트 변경 */
+.gnb a:hover {
+    color: #999;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.gnb dl {
+    position: relative;
+    float: left;
+    width: 116px;
+    left: 36px;
+    background-color: #fff;
+}
+/* 메뉴 호버 시 열림 */
+.gnb:hover {
+    height: 350px;
+    background-color: #faf8f8;
+}
+.gnb:hover * {
+    background-color: #faf8f8;
+}
+/* 가상요소로 중간선 만들기 */
+.gnb::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 77px;
+    left: 10px;
+    width: 700px;
+    height: 1px;
+    background-color: #e8e8e8;
+}
+/* 각 메뉴 너비 조정  */
+.gnb dl:first-child {
+    width: 108px;
+    margin-left: -10px;
+}
+.gnb dl:nth-child(2)~ {
+    margin-right: 10px;
+}
+.gnb dl:last-child {
+    width: 130px;
+    margin-left: 15px;
+}
+.gnb dt {
+    position: relative;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.gnb dt>a {
+    font: bold 20px/26px sans-serif;
+    padding-top: 20px;
+}
+.gnb dd {
+    margin-left: 5px;
+    display: block;
+}
+.gnb dd>a {
+    font: 14px/24px sans-serif;
+}
+
+/* 메뉴 플로팅 후 올라가는 배너 밀어내기 */
+.block {
+    height: 110px;
+}
+
+/********* B. 배너 ***********/
+/* 3. 교재찾기/배너 */
+#ban>.ibx {
+    position: relative;
+    height: 470px;
+    width: 1000px;
+}
+
+/* 배경 슬라이드 이미지 */
+.slide,
+.slide>ul,
+.slide>ul>li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 배너 이미지 li에 셋팅하기 */
+.slide>ul>li{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+}
+/* 선택슬라이드 클래스 */
+.slide>ul>li.on{
+    opacity: 1;
+    z-index: 1;
+}
+/*블릿*/
+#indic {
+    position: absolute;
+    bottom: 50px;
+    left: 60%;
+}
+
+#indic li {
+    position: relative;
+    width: 20px;
+    height: 10px;
+    margin: 0 5px;
+    z-index: 2;
+}
+/* 좌우 화살표 */
+.arrow {
+    position: absolute;
+    width: 1200px;
+    height: 53px;
+    top: 40%;
+    left: calc(50% - 600px);
+    text-align:center;
+}
+.arrow1 {
+    margin-right: 520px;
+}
+.arrow2 {
+    margin-left: 520px;
+}
+
+/* 배너배경색 */
+#ban {
+    position: relative;
+    background: rgb(210, 150, 250);
+}
+/* 사이드메뉴 */
+.side {
+    position: absolute;
+    top: 0;
+    width: 160px;
+}
+.smenu {
+    background-color: #fff;
+    text-align: center;
+    align-content: space-between;
+}
+.smenu img {
+    position: relative;
+    height: 142px;
+    z-index: 1;
+}
+.smenu a:nth-child(2) {
+    height: 135px;
+}
+.smenu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #888;
+    top: 142px;
+    left: 22px;
+    height: 1.5px;
+    width: 116px;
+    opacity: .3;
+    z-index: 3;
+}
+
+/* 교재찾기 박스 */
+.tsearch {
+    text-align: center;
+    line-height: 44px;
+    background-color: #444444;
+}
+.tsearch span {
+    color: #fff;
+}
+/* 교재검색아이콘 위치조정 */
+.tsearch img {
+    margin: 0 6px 12px -6px;
+}
+
+/******** C. 메인 *********/
+
+/* 3. 퀵메뉴 */
+.quick {
+    height: 320px;
+    text-align: center;
+    padding-top: 40px;
+}
+.cont2 img {
+    width: 32.9%;
+    margin-bottom: 25px;
+}
+
+/* 4. 이벤트 배너 */
+/* 점선 만들기 */
+.cont3 {
+    position: relative;
+    height: 393px;
+    text-align: center;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #888 33%, rgba(255,255,255,0) 0%);
+    background-position: top;
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+}
+.cont3 .tit2 {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    letter-spacing: .8px;
+}
+#event {
+    position: relative;
+    width: 1750px;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 63px;
+}
+.event {
+    position: absolute;
+    width: 700%;
+    height: 100%;
+}
+.event img {
+    box-sizing: border-box;
+    float: left;
+    opacity: .2;
+}
+.event img.on {
+    opacity: 1;
+}
+/* 화살표 박스 */
+#cont #arr {
+    position: relative;
+    width: 800px;
+    height: 53px;
+    top: 100px;
+    left: 50%;
+}
+/* 화살표 공통 */
+#cont3 .arr {
+    position: absolute;
+    top: 186px;
+    width: 30px;
+    height: 53px;
+    z-index: 999;
+}
+/* 왼화 */
+#cont3 .arr1 {
+    left: 165px;
+}
+/* 오화 */
+#cont3 .arr2 {
+    right: 165px;
+}
+/* 불릿 */
+.indic {
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.indic li {
+    padding: 0 2px;
+}
+.indic img {
+    width: 80%;
+    height: 80%;
+}
+
+/* 5. 고객센터/공지사항 */
+.cont4 {
+    border-top: 2px solid #888;
+}
+.cont4>.pbx {
+    height: 232px;
+    padding: 40px 5px;
+    box-sizing: border-box;
+}
+.cont4 h2 {
+    display: inline-block;
+    letter-spacing: 1px;
+    width: 80%;
+}
+/* 고객센터 */
+.custom>section{
+    margin-top: 18px;
+    margin-left: 1px;
+}
+
+.custom>section>* {
+    float: left;
+}
+.custom>section>h1 {
+    font-size: 32px;
+    line-height: 48px;
+    margin-left: 10px;
+}
+.custom>section>h3 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 10px;
+}
+/* 문의 */
+.faq {
+    text-align: center;
+}
+.faq a {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 100px;
+    float: left;
+    margin: 10px 10px;
+    padding-top: 35px;
+}
+/* 아이콘 사이 구분선 */
+.faq a+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: 32px;
+    width: 1px;
+    height: 65px;
+    background-color: rgb(204, 204, 204, .6);
+    z-index: 9999;
+}
+.faq span{
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 16px;
+    letter-spacing: 1px;
+}
+.faq>a:nth-child(2) span{
+    letter-spacing: -1px;
+}
+/* 공지사항 */
+.notice>.tit2 {
+    margin-bottom: 14px;
+}
+.more {
+    margin-left: 12px;
+}
+.notice li {
+    position: relative;
+    width: 100%;
+}
+
+#notice a {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 25px;
+}
+.notice span {
+    display: inline-block;
+    font-size: 14px;
+}
+#notice span {
+    position: absolute;
+    right: 0;
+    line-height: 25px;
+}
+
+
+
+/************ D. 하단 *********/
+/* info1 */
+#info {
+    border-top: 1px solid #ccc;
+}
+.info>.info1 {
+    height: 58px;
+}
+.info .pol a{
+    display: inline-block;
+    width: 140px;
+    line-height: 60px;
+    font-size: 14px;
+}
+.pol::before {
+    content: '|';
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 116px;
+    opacity: .8;
+}
+.sns {
+    margin-top: 5px;
+}
+.sns a {
+    margin-left: 26px;
+    
+}
+#fam {
+    float: right;
+    display: block;
+    width: 180px;
+    height: 32px;
+    margin-top: 14px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+/* info2 - 하단로고&주소 */
+.info>.info2 {
+    height: 180px;
+    background-color: #f8f8f8;
+}
+/* .info2 배경 */
+#info::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 180px;
+    width: 100%;
+    background-color: #f8f8f8;
+}
+.info2>.pbx {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.info2>.address {
+    margin-left: 50px;
+}
+.address>p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}

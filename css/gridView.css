@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.grid {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 960px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.grid li {
+    float: left;
+    width: 8.33%;
+    height: 100%;
+    background-color: royalblue;
+    box-sizing: border-box;
+    padding: 0 10px;
+
+    background-clip: content-box;  /* 패딩만 배경색 빼기 */
+    /* background-clip : 배경색 영역 설정
+    - padding-box 패딩까지 색 다넣기(기본값)
+    - border-box 보더까지만 색넣기
+    - content-box 컨텐트 영역까지만 배경색 넣기 (보더패딩 제외) 
+
+    * background-origin : 배경이미지 영역 설정
+    - padding-box 패딩까지 배경이미지 다 넣기
+    - border-box 보더까지만 배경이미지 넣기
+    - content-box 컨텐트 영역까지만 배경색 넣기 (보더패딩 제외) 
+    */ 
+
+
+}

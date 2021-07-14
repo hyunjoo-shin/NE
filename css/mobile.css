@@ -3,13 +3,19 @@
 /* 모바일용 css */
 
 /* 상단 메뉴바 */
+.mtop {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
 .mtop1 {
 	position: fixed;
-	width: 650px;
+	width: 100vw;
 	height: 24px;
     margin: 0;
     padding: 5px 0;
     background-color: #fff;
+	border: 1px solid #e2e2e2;
 	z-index: 999;
 }
 
@@ -40,6 +46,7 @@
 .mlogo {
 	position: absolute;
 	top: 5px;
+	width: 100vw;
 	text-align: center;
 	
 }
@@ -47,7 +54,7 @@
 	position: absolute;
 	width: 10px;
 	top: -5px;
-	right: 6vw;
+	right: 10vw;
 }
 
 .mtop2 {
@@ -58,7 +65,7 @@
 }
 .mtop2>div {
 	box-sizing: border-box;
-	width: 325px;
+	width: 50vw;
 	height: 100%;
 	float: left;
 	text-align: center;
@@ -77,28 +84,33 @@
 	background-color: rgb(146, 73, 175);
 }
 
-/* 햄버거 메뉴 */
+/* 사이드 숨은 메뉴 */
 #mmenu {
 	position: absolute;
 	top: 0;
 	right: 0vw;
 	width: 160px;
 	z-index: 99999999;
+	display: none;
 }
 
-ul.mmenu,
-.mmenu li {
-	padding: 10px 20px;
-	display: block;
-	clear: both;
-}
 .mmenu {
 	background-color: #f8f8f8;
+	opacity: .9;
+}
+
+.mmenu li {
+	padding: 10px 20px;
+	margin-left: 5px;
+	clear: both;
+}
+.mmenu>li:first-child {
+	margin-top: 7px;
 }
 .mmenu>li>a {
 	font-size: 16px;
 	color: #888;
-	line-height: 24px;
+	line-height: 22px;
 }
 .mmenu>li:hover>a {
 	font-size: 15px;
@@ -107,15 +119,24 @@ ul.mmenu,
 	color: rgb(146, 73, 175);
 }
 .msub {
+	width: 180px;
+	margin-top: 10px;
+	margin-left: -25px;
 	background-color: #fff;
+}
+.msub>li {
+	margin-left: 20px;
+	padding: 8px 20px;
 }
 .msub>li>a {
 	font-size: 15px;
 	color: #333;
-	line-height: 24px;
+	line-height: 16px;
 }
 .msub>li:hover>a {
 	font-size: 16px;
-	color: #ccc;
+	color: #888;
+	font-weight: bold;
+	letter-spacing: -0.5px;
 }
 

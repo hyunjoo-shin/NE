@@ -13,16 +13,18 @@
 		overflow-x: hidden;
 	}
 	.ibx {
-		max-width: 650px;
+		max-width: 100vw;
 		overflow: hidden;
 	}
 	#top,
 	.block,
 	.side,
 	#indic,
+	.cont3 h2,
 	.arrow,
 	.arr,
-	.indic {
+	.indic,
+	.faq {
 		display: none;
 	}
 	#mmenu {
@@ -33,21 +35,42 @@
 		height: 65px;
 	}
 	#ban {
-		height: 100%;
+		height: 60vw;
+		overflow: hidden;
 	}
 	.slide {
+		height: 50vw;
 		background: #eee;
 	}
 	.slide>ul img {
 		position: absolute;
-		max-width: 750px;
+		width: 120vw;
+		height: 50vw;
 		top: 50px;
-		left: -100px;
-	}
-	.cont2 {
-		height: 280px;
+		left: -20%;
 		overflow-y: hidden;
 	}
-
+	.quick {
+		margin-left: 3px;
+	}
+	.cont2 {
+		width: 32vw;
+		height: 47vw;
+		overflow: hidden;
+	}
+	.cont2 img {
+		width: 30vw;
+	}
+	.cont3 {
+		height: 30vw;
+	}
+	#event {
+		padding: 0;
+		margin: 0;
+	}
+	/* 고객센터/공지사항 */
+	.cont4 {
+		border : none;
+	}
 
 }
